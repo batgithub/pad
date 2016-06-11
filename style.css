@@ -5,6 +5,7 @@ html, body {
   font-size: 16px;
   font-family: "helvetica";
   background: #F1F1F1;
+  text-align: center;
 }
 
 h1 {
@@ -12,6 +13,10 @@ h1 {
   text-transform: uppercase;
   color: #7f8894;
   text-align: center;
+}
+
+img {
+  margin: auto;
 }
 
 .wrap {
@@ -30,9 +35,22 @@ button {
   cursor: pointer;
   transition: 0.3s;
 }
-button:hover {
-  background: #ff6c73;
-  color: #FFFFFF;
+button:focus {
+  outline: none;
+  background: #FFFFFF;
+  color: #ff6c73;
+}
+
+@media (min-width: 600px) {
+  button:hover {
+    background: #ff6c73;
+    color: #FFFFFF;
+  }
+}
+.active {
+  background: #ff6c73 !important;
+  color: #FFFFFF !important;
+  transition: 0.3s;
 }
 
 /*# sourceMappingURL=style.css.map */

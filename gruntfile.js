@@ -8,7 +8,7 @@ module.exports = function(grunt){
          sass: {
             dev: {
                     files: {
-                        'app/style.css': 'app/app.scss'
+                        'style.css': 'app.scss'
                 },
                     options: {
                     update: true,
@@ -21,7 +21,7 @@ module.exports = function(grunt){
     	watch: {
             options: {},
             sass : {
-                files: ['app/**/*.scss'],
+                files: ['**/*.scss'],
                 tasks: ['sass:dev'],
                 options: { }
             },

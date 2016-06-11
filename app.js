@@ -6,8 +6,6 @@ function loader() {
             var dure = '<span>'+ $('#'+ file)+'</span>';
 
             var b = $('#'+ file);
-            console.log(b);
-            console.log(b['context']['all']['8']);
 
             $(this).append(audio);
         }
@@ -18,9 +16,16 @@ function loader() {
 
 
 function playSound(id) {
+
     var audioClick = $('#'+ id)[0];
-    var a = audioClick.duration;
-    console.log(audioClick);
-    console.log(a);
+    var duration = (audioClick.duration)*1000;
+
+
     audioClick.play();
+    audioClick.onplaying=function(){
+        $(audioClick).parent().addClass( "active" );
+    };
+
+    setTimeout(function(){ $(audioClick).parent().removeClass( "active" );}, duration);
+
 }

@@ -5,7 +5,7 @@ html, body {
     font-size: 16px;
     font-family: "helvetica";
     background: #F1F1F1;
-
+    text-align: center;
 
 }
 h1{
@@ -14,6 +14,9 @@ h1{
     color: #7f8894;
     text-align: center;
 
+}
+img {
+    margin: auto;
 }
 
 $primary-color : #FFFFFF;
@@ -35,8 +38,23 @@ button {
     cursor: pointer;
     transition: $transition-duration;
 
-    &:hover {
+
+    &:focus {
+        outline: none;
+        background: $primary-color;
+        color: $accent-color;
+    }
+}
+@media (min-width: 600px) {
+    button:hover {
         background: $accent-color;
         color: $primary-color;
+
     }
+}
+
+.active {
+    background: $accent-color !important;
+    color: $primary-color !important;
+    transition: $transition-duration;
 }
